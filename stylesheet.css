@@ -1,3 +1,17 @@
+#lhs {
+	float: left;
+	width: 20%;
+}
+
+.menuitem {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#rhs {
+	float: right;
+}
+
 #orderButton {
 	background-color: blue;
 	height: 50px;
