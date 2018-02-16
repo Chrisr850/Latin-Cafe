@@ -8,6 +8,20 @@
 	padding-bottom: 10px;
 }
 
+#btn {
+	width: 10px;
+	height: 10px;
+	margin-left: 10px;
+}
+
+.btnup {
+	background-image: url("uparrow.png");
+}
+
+.btndown {
+	background-image: url("downarrow.png");
+}
+
 #rhs {
 	float: right;
 }
@@ -19,4 +33,8 @@
 	border-radius: 10px;
 	text-align: center;
 	float: center;
+}
+
+.menuitem * {
+	display: inline-block;
 }
