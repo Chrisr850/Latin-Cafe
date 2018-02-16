@@ -1,0 +1,40 @@
+#lhs {
+	float: left;
+	width: 20%;
+}
+
+.menuitem {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#btn {
+	width: 10px;
+	height: 10px;
+	margin-left: 10px;
+}
+
+.btnup {
+	background-image: url("uparrow.png");
+}
+
+.btndown {
+	background-image: url("downarrow.png");
+}
+
+#rhs {
+	float: right;
+}
+
+#orderButton {
+	background-color: blue;
+	height: 50px;
+	width: 100px;
+	border-radius: 10px;
+	text-align: center;
+	float: center;
+}
+
+.menuitem * {
+	display: inline-block;
+}
