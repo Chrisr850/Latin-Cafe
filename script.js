@@ -14,25 +14,26 @@ var total_price = 0.00;
 $(document).ready(function(){
 
 	$.each(menu, function(key, value) {
-		$('#lhs').append('<div class=\'menuitem\' id=\'down\' id=\'' + key + '\'>' + key + ': $' + value.toFixed(2) + '<div id=\'btn\' class=\'btndown\'></div>' + '</div>');
+		$('#lhs').append('<button id=\'down\' id=\'' + key + '\'>' + key + ': $' + value.toFixed(2) + '<div id=\'btn\' class=\'btndown\'></div>' + '</button>');
 	});
 
 	// init animations when click on menu item
-	$("#down").on("click", function(){
-		$(this).removeAttr("id");
-		$(this).attr("id", "up");
-		console.log("up");
-		var btn = $(this).find("div");
-		btn.removeClass("btndown");
-		btn.addClass("btnup");
-	});
-	$("#up").on("click", function(){
-		$(this).removeAttr("id");
-		$(this).attr("id", "down");
-		console.log("down");
-		var btn = $(this).find("div");
-		btn.removeClass("btnup");
-		btn.addClass("btndown");
+	$("button").on("click", function(){
+		if($(this).attr("id") === "down") {
+			$(this).removeAttr("id");
+			$(this).attr("id", "up");
+			console.log("up");
+			var btn = $(this).find("div");
+			btn.removeClass("btndown");
+			btn.addClass("btnup");
+		}
+		else {
+			$(this).removeAttr("id");
+			$(this).attr("id", "down");
+			var btn = $(this).find("div");
+			btn.removeClass("btnup");
+			btn.addClass("btndown");
+		}
 	});
 
 	/*
@@ -55,4 +56,3 @@ $(document).ready(function(){
 	});
 
 });
-
