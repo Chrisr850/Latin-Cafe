@@ -3,11 +3,6 @@
 	width: 20%;
 }
 
-.menuitem {
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
 #btn {
 	width: 10px;
 	height: 10px;
@@ -35,6 +30,15 @@
 	float: center;
 }
 
-.menuitem * {
+button * {
 	display: inline-block;
 }
+
+button {
+	display: block;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
