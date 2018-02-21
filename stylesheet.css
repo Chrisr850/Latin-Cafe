@@ -46,4 +46,27 @@ button {
 	padding-bottom: 10px;
 }
 
+#addButton {
+	width: 20px;
+	height: 20px;
+	background-color: blue;
+}
+
+#orderContainer {
+	display: inline-block;
+}
+
+.hidden {
+	display: none;
+}
+
+#orderContainer * {
+	display: inline;
+	font-size: 10px;
+}
+
+textarea {
+	margin-top: 5px;
+}
+
 
