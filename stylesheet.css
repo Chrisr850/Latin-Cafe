@@ -41,7 +41,7 @@ button {
 	padding-bottom: 10px;
 }
 
-#addButton {
+.addButton {
 	width: 20px;
 	height: 20px;
 	background-color: blue;
@@ -49,10 +49,6 @@ button {
 
 #orderContainer {
 	display: inline-block;
-}
-
-.hidden {
-	display: none;
 }
 
 #orderContainer * {
@@ -63,5 +59,13 @@ button {
 textarea {
 	margin-top: 5px;
 }
+
+.hidden {
+	visibility: hidden;
+}
+
+/** {
+	display: none;
+}*/
 
 

@@ -14,7 +14,8 @@ $(document).ready(function(){
 	// adding menu items to website at load
 	// beware, there is an extremely long line of code below
 	$.each(menu, function(key, value) {
-		$('#lhs').append(button_begin+key+'\'>'+key+': $'+value.toFixed(2)+div_begin+'</button><div id=\'orderContainer\' class=\'hidden\'>Amt: <textarea rows=\'1\' cols=\'5\'></textarea><div id=\'addButton\'>Add to order</div></div>');
+		$('#lhs').append("<div id=\'" + key + "\' class=\'orderBigBox\'>"+ button_begin+key+'\'>'+key+': $'+value.toFixed(2)+div_begin+'</button><div id=\'orderContainer\' class=\'hidden\'>Amt: <textarea rows=\'1\' cols=\'5\'></textarea><div class=\'addButton\'>Add to order</div></div></div>');
+		order[key] = 0;
 	});
 
 	// init animations when click on menu item
@@ -25,7 +26,7 @@ $(document).ready(function(){
 			var btn = $(this).find("#btn");
 			btn.removeClass("btndown");
 			btn.addClass("btnup");
-			$(this).find("#orderContainer").removeClass("hidden");
+			$(this).siblings("#orderContainer").removeClass("hidden");
 		}
 		else {
 			$(this).removeAttr("id");
@@ -33,8 +34,16 @@ $(document).ready(function(){
 			var btn = $(this).find("#btn");
 			btn.removeClass("btnup");
 			btn.addClass("btndown");
-			$(this).find("#orderContainer").addClass("hidden");
+			$(this).siblings("#orderContainer").addClass("hidden");
 		}
+	});
+
+	$(".addButton").on("click", function(){
+		var type_of_thing = $(this).parent().parent().attr("id");
+		var amt = parseInt($(this).siblings("textarea").val());
+		var price = menu[type_of_thing] * amt;
+		total_price += price;
+		order[type_of_thing] += amt;
 	});
 
 	/*
