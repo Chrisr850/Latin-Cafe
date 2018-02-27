@@ -1,0 +1,85 @@
+body {
+	background-image: url("https://avatars2.githubusercontent.com/u/26640365?s=400&v=4");
+	background-repeat: repeat-x;
+}
+
+#lhs {
+	float: left;
+	width: 20%;
+}
+
+#btn {
+	width: 10px;
+	height: 10px;
+	margin-left: 10px;
+}
+
+.btnup {
+	background-image: url("uparrow.png");
+}
+
+.btndown {
+	background-image: url("downarrow.png");
+}
+
+#rhs {
+	float: right;
+}
+
+.orderButton {
+	background-color: blue;
+	height: 50px;
+	width: 100px;
+	border-radius: 10px;
+	text-align: center;
+	float: right;
+}
+
+.resetButton {
+	background-color: blue;
+	height: 50px;
+	width: 100px;
+	border-radius: 10px;
+	text-align: center;
+	float: right;
+}
+
+button * {
+	display: inline-block;
+}
+
+button {
+	display: block;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.addButton {
+	width: 20px;
+	height: 20px;
+	background-color: blue;
+}
+
+#orderContainer {
+	display: inline-block;
+}
+
+#orderContainer * {
+	display: inline;
+	font-size: 10px;
+}
+
+textarea {
+	margin-top: 5px;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+/** {
+	display: none;
+}*/
+
+
