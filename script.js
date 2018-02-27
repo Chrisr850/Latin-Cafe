@@ -61,7 +61,7 @@ $(document).ready(function(){
 	// adding menu items to website at load
 	// beware, there is an extremely long line of code below
 	$.each(menu, function(key, value) {
-		$('#lhs').append("<div id=\'" + key + "\' class=\'orderBigBox\'>"+ button_begin+key+'\'>'+key+': $'+value.toFixed(2)+div_begin+'</button><div id=\'orderContainer\' class=\'hidden\'>Amt: <textarea rows=\'1\' cols=\'5\'></textarea><div class=\'addButton\'>Add to order</div></div></div>');
+		$('#lhs').append("<div id=\'" + key + "\' class=\'orderBigBox\'>"+ button_begin+key+'\'>'+key+': $'+value.toFixed(2)+div_begin+'</button><div id=\'orderContainer\' class=\'hidden\'>Amt: <textarea placeholder=\'0\' rows=\'1\' cols=\'5\'></textarea><div class=\'addButton\'>Add to order</div></div></div>');
 		order[key] = 0;
 	});
 	order["total"] = 0;
