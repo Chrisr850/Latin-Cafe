@@ -21,13 +21,22 @@
 	float: right;
 }
 
-#orderButton {
+.orderButton {
 	background-color: blue;
 	height: 50px;
 	width: 100px;
 	border-radius: 10px;
 	text-align: center;
-	float: center;
+	float: right;
+}
+
+.resetButton {
+	background-color: blue;
+	height: 50px;
+	width: 100px;
+	border-radius: 10px;
+	text-align: center;
+	float: right;
 }
 
 button * {
