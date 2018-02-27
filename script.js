@@ -10,17 +10,35 @@ var total_price = 0.00;
 var button_begin = '<button id=\'down\' id=\'';
 var div_begin = '<div id=\'btn\' class=\'btndown\'></div>';
 
+function realmReset() {
+	total_price = 0.00;
+	$.each(order, function(key, value) {
+		order[key] = 0;
+	})
+	updateRHS();
+}
+
 function updateRHS() {
 	$("#rhs").empty();
-	var sum = 0;
+	var sum = 0.0;
 	$.each(order, function(key, value) {
 		if(value != 0 && key != "total") {
 			$("#rhs").append("<div id=\'asdf\'>" + key + ": " + order[key] + "\t$" + menu[key] * order[key] + "</div>");
 			sum += menu[key] * order[key];
 		}
 	});
-	$("#rhs").append("<div id=\"totalprice\">Total price: $" + sum.toFixed(2) + "</div>");
+	if(sum != 0.0) {
+		$("#rhs").append("<div id=\"totalprice\">Total price: $" + sum.toFixed(2) + "</div>");
+	}
 	$("#rhs").append("<div class=\"orderButton\">Send order!</div>");
+	$("#rhs").append("<div class=\"resetButton\">Reset order!</div>");
+}
+
+function resetListen() {
+	$(".resetButton").on("click", function(){
+		realmReset();
+		updateRHS();
+	});
 }
 
 function orderListen() {
@@ -77,13 +95,10 @@ $(document).ready(function(){
 		order[type_of_thing] += amt;
 		updateRHS();
 		orderListen();
+		resetListen();
 	});
 
-	/*
-		note that this function is temporary.
-		Instead of text, the JSON doc will include
-		The contents of the order
-	*/
 	orderListen();
+	resetListen();
 
 });
