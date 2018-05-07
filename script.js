@@ -1,9 +1,12 @@
 // initializing global variables
 var menu = {
-	"coffee": 2.50,
+	"Drip Coffee (12oz)": 1.25,
+	"Drip Coffee (16oz)": 1.50,
+	"Americano (12oz)": 1.50,
+	"Americano (12oz)": 1.75,
 	"tea": 2.50,
 	"hot chocolate": 2.00,
-	"lunch": 5.00
+	"lunch": 5.1
 };
 var order = {};
 var total_price = 0.00;
@@ -45,14 +48,14 @@ function orderListen() {
 	$(".orderButton").on("click", function(){
 		console.log(order);
 		$.ajax({
-			type: "post",
-			dataType: "json",
+			method: "GET",
 			url: "http://10.74.1.3:5000/",
-			crossDomain: true,
-			contentType: "application/json",
+            contentType: 'application/json',
+			dataType: 'jsonp',
 			data: JSON.stringify(order),
-			processData: false
-		});
+			processData: false,
+            crossDomain: true,
+		})
 	});
 }
 
