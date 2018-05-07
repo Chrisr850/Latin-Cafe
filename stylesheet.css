@@ -9,12 +9,24 @@
 	margin-left: 10px;
 }
 
+button {
+    border-radius: 10px;
+    background-color: #FD6A02;
+    width: 70%;
+}
+
+#asdf {
+    border-radius: 10px;
+}
+
 .btnup {
 	background-image: url("uparrow.png");
+    background-repeat: no-repeat;
 }
 
 .btndown {
 	background-image: url("downarrow.png");
+    background-repeat: no-repeat;
 }
 
 #rhs {
@@ -60,9 +72,13 @@ button {
 	display: inline-block;
 }
 
+.addButton {
+    margin-bottom: 10px;
+}
+
 #orderContainer * {
 	display: inline;
-	font-size: 10px;
+	font-size: 14px;
 }
 
 textarea {
@@ -71,6 +87,15 @@ textarea {
 
 .hidden {
 	visibility: hidden;
+}
+
+#orderContainer {
+    text-align: center;
+    padding-left: 50px;
+}
+
+textarea {
+    margin-right: 10px;
 }
 
 /** {
